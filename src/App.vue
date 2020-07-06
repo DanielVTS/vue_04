@@ -6,11 +6,13 @@
           <template v-slot:SideBarButton>
             <UserButton></UserButton>
             <CartButton></CartButton>
+
           </template>
         </SideBar>
       </template>
       <template v-slot:page>
-        <Cart></Cart>
+<!--        <Cart></Cart>-->
+        <router-view></router-view>
       </template>
     </BaseComponent>
   </div>
@@ -19,18 +21,17 @@
 <script>
 
 import BaseComponent from './components/BaseComponent.vue';
-import Cart from "./components/Cart/Cart";
-import SideBar from "./components/SideBar/SideBar";
-import CartButton from "./components/SideBar/CartButton";
-import UserButton from "./components/SideBar/UserButton";
+import SideBar from "./components/sideBar/SideBar";
+import CartButton from "./components/sideBar/CartButton";
+import UserButton from "./components/sideBar/UserButton";
 
 export default {
   name: 'App',
+
   components: {
     UserButton,
     CartButton,
     SideBar,
-    Cart,
     BaseComponent,
   }
 }

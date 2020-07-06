@@ -1,5 +1,5 @@
 <template>
-    <li class="nav-item"><a href="#">Cart</a></li>
+    <li class="nav-item"><router-link to="/cart">Cart</router-link></li>
 </template>
 
 <script>
